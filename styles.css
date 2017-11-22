@@ -1,21 +1,78 @@
+.site {
+  background: #000000;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: '. inputs .'
+                       '. buttons .';
+}
+#inputs {
+  grid-area: inputs;
+}
+
 input {
   padding: 10px;
-  height: 40px;
-  border: 0px;
+  border: 0; 
+  height: 25px;
 }
 
 #numbers {
   margin-left: 3px;
-  width: 133px;
+  width: 115px;
   margin-right: 0px;
 }
 
 #operation {
-  width: 40px;
+  width: 16px;  
+}
+
+table {
+  grid-area: buttons;
 }
 
 button {
-  padding: 10px;
+  touch-action: manipulation;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  line-height: 40px;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 20px;
+  border: 0px;
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+}
+
+button:hover {
+  background-color: #737373;
+}
+
+button:active {
+  background-color: #737373;
+}
+
+.operations {
+  background-color: #f19a38;
+}
+
+.operations:hover {
+  background-color: #f4c994;
+}
+
+.operations:active {
+  background-color: #f4c994;
+}
+
+#inputs {
+  padding-top: 20px;  
+}
+
+#inputs > input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color: #FFFFFF;
+  background-color: #000000;
 }
